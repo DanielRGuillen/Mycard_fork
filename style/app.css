@@ -1,0 +1,126 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* cambiamos el nombre de articulo con una clase y ahora se ve */
+.card{
+    background-color: #31354e;
+    border-radius: 10px;
+    padding: 30px 18px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}/*recordar elementos padres*/
+header{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;/*el corazon va al fondo*/
+
+}
+/* en orden de importancia de selectores, id, clase y ultimas etiqueta 
+id tiene mayor jerarquia*/
+.header_icon{
+    width: 25px;
+
+}
+.myPhoto{
+    border-radius: 50%;
+    width: 20%;
+    object-fit: cover;
+}
+.myPhoto::before
+h1{
+    font-size: 20px;
+    color: #f5f5f5;
+    font-weight: 500;
+    margin: 10px 0 5px 0;
+
+}
+/* padre -> articule */
+.article_subtittle{
+    color: rgba(255, 255, 255, 0.459);
+    margin: 0 0 0 0;
+}
+p{
+    color: #f5f5f5;
+    width: 40%;
+    text-align: center;
+    line-height: 1.4;
+}
+/* los botones son los que mas estilos llevan
+primero se aumenta el tamaño de fuente */
+button{
+    font-size: 15px;
+    /* pading lo hacemos gordido 5 arriba y 28 a los lados */
+    padding: 9px 40px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(81,129,207);
+    background: linear-gradient(90deg, rgba(81,129,207,1) 36%, rgba(247,74,233,1) 100%);
+    /* color del boton, la letra */
+    color: #fff; 
+}
+hr{
+    width: 90%;
+}
+section{
+    /* si se nos pone por default ya no hagamos mas */
+    display: flex;
+    gap: 20px;
+    /* background-color: green; */
+    justify-content: center;
+    width: 100%;
+}
+section article{
+
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+
+/* cambia todos los numeros */
+section article p{
+    font-size: 19px;
+    margin: 0;
+    font-weight: 500;
+}
+.item_footer{
+    font-size: 11px;
+    color: rgba(128, 128, 128, 0.936);
+}
+/* imagen que tienen como padre un a */
+/* nt child seleciona el hijo */
+section article:nth-child(1) a{
+    background-color: red;
+}
+section article:nth-child(2) a{
+    /* background-color: green; */
+    background: rgb(32,103,217);
+    background: linear-gradient(90deg, rgba(32,103,217,1) 6%, rgba(96,187,235,1) 86%);
+}
+section article:nth-child(3) a{
+    /* background-color: green; */
+    background: rgb(32,103,217);
+    background: linear-gradient(90deg, rgba(32,103,217,1) 6%, rgba(96,187,235,1) 86%);
+}
+section article a{
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+section article img{
+    padding: 18px;
+    width: 50px;
+    border-radius: 50%;
+}
